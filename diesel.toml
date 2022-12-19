@@ -1,0 +1,11 @@
+# For documentation on how to configure this file,
+# see https://diesel.rs/guides/configuring-diesel-cli
+
+[print_schema]
+file = "src/schema.rs"
+generate_missing_sql_type_definitions = false
+import_types = ["diesel::sql_types::*", "geozero::postgis::diesel::sql_types::*"]
+filter = { only_tables = ["geometries"] }
+
+[migrations_directory]
+dir = "migrations"
